@@ -27,6 +27,7 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 # 2. Create key pair
 
 # 3. Create security group
+  * Security group for ELB( AWS Elastic Load Balancer)
   1.  create new security group for elasti load balancer named  as - PROJ02-SG-ELB
   2.  allow port no 80,443 for both ip 4 and ip 6
    ![image](https://user-images.githubusercontent.com/62290469/234356887-95b6ee0c-367a-429a-9d2a-bf5596cc5559.png)
