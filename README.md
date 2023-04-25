@@ -20,4 +20,4 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 
 # Execution Detail 
 # 1. Login to account
-fdfdfdfdf
+![image](https://user-images.githubusercontent.com/62290469/234351298-6f5cd22c-aa7f-420e-bd52-4a9038f0444f.png)
