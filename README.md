@@ -7,7 +7,7 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 # Flow of  Execution
 1. [Login to account](#1-login-to-account)
 2. [Create key pair](#1-login-to-account)
-3. [Create security group](#1-login-to-account)
+3. [Create security group](#3-create-security-group)
 4. [Lunch instane with user data (bash script)](#1-login-to-account)
 5. [Update ip to name mapping in route 53](#1-login-to-account)
 6. [build application from source code](#1-login-to-account) 
@@ -37,5 +37,11 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
     2. allow elb traffic to access web application by portno 8080
     ![image](https://user-images.githubusercontent.com/62290469/234359270-afc6d9e7-3bd9-4014-bbec-c4ed67cd17de.png)
     
+  * Security group for backnd server (memcached,rabbit mq  & mysql)
+   1. Security group name - PROJ02-SG-BACKEND
+   2. allow traffic from tomact abbplicaton server to  port no 3306(mysql) , 11211(memcached) and rabbitmq(5672)
+      ![image](https://user-images.githubusercontent.com/62290469/234366477-5fe383e3-c75d-496e-9d74-dddfedee646a.png)
+
+   
     [Back to Top](#flow-of--execution)
 
