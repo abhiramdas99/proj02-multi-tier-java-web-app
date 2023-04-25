@@ -19,4 +19,4 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 12. Build autoscaling group for tomcat instance 
 
 # Execution Detail 
-** Login to account **
+# 1. Login to account
