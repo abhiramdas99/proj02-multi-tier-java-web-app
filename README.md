@@ -17,3 +17,6 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 10. map elb end point to website name Godaddy dns
 11. verify all
 12. Build autoscaling group for tomcat instance 
+
+# Execution Detail 
+** Login to account **
