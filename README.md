@@ -31,4 +31,11 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
   1.  create new security group for elasti load balancer named  as - PROJ02-SG-ELB
   2.  allow port no 80,443 for both ip 4 and ip 6
    ![image](https://user-images.githubusercontent.com/62290469/234356887-95b6ee0c-367a-429a-9d2a-bf5596cc5559.png)
-   
+
+  * Security group for tomcat web application server
+    1. Security group name - PROJ02-SG-WEB-APP
+    2. allow elb traffic to access web application by portno 8080
+    ![image](https://user-images.githubusercontent.com/62290469/234359270-afc6d9e7-3bd9-4014-bbec-c4ed67cd17de.png)
+    
+    [Back to Top](#flow-of--execution)
+
