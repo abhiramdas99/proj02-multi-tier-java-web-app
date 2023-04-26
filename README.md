@@ -60,7 +60,12 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
     8. storage : default as per ami
     9. advance detail :
        1. user data : copy the script from /userdata/mysql.sh and paste here
-    10. then final lunch it    
+    10. then final lunch it   
+    11. take the ssh to ec2 and run the following command to validate 
+        1. ps -ef // to check if any process is running related sql
+        2. systemctl status mariadb
+        ![image](https://user-images.githubusercontent.com/62290469/234491543-7b48458b-0f71-47d8-a5ea-1267fad158bc.png)
+
    
 
    
