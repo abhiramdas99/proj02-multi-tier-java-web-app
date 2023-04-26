@@ -108,6 +108,9 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
     7. finally create it<br>
     8. after successfully created, add new record [create record]<br>
     ![image](https://user-images.githubusercontent.com/62290469/234607346-ccf09c06-0830-487d-808b-2136ad26eb87.png)
+    
+    9. Kindly note that, the host name entered in dns zone should be match with application.properties in  src folder
+     
  
    
     [Back to Top](#flow-of--execution)
