@@ -54,6 +54,7 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
     2. Amazon Machine Image (AMI) : CentOS-7-2111-20220825_1.x86_64- ( from the market place)
     3. Instance type : t2.micro
     4. keypair : attached earlier creaate 
+    5. security group : attached as per earlier create ie. PROJ02-SG-BACKEND
     5. vpc :default 
     6. subnet : default 
     7. auto-asigned public IP : enabled
@@ -66,8 +67,35 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
         2. systemctl status mariadb
         ![image](https://user-images.githubusercontent.com/62290469/234491543-7b48458b-0f71-47d8-a5ea-1267fad158bc.png)
 
-   
+  * Lunch Backend - memcached
+    1. instance name : proj02-memcached-instance ( its your choice whatever you require you can give)
+    2. Amazon Machine Image (AMI) : CentOS-7-2111-20220825_1.x86_64- ( from the market place)
+    3. Instance type : t2.micro
+    4. keypair : attached earlier create 
+    5. security group : attached as per earlier create ie. PROJ02-SG-BACKEND
+    5. vpc :default 
+    6. subnet : default 
+    7. auto-asigned public IP : enabled
+    8. storage : default as per ami
+    9. advance detail :
+       1. user data : copy the script from /userdata/memcache.sh and paste here
+    10. then final lunch it     
+        ![image](https://user-images.githubusercontent.com/62290469/234559832-91a0a039-fa62-4554-b52b-0d1c40b99390.png)
+       
+     * Lunch Backend - rabbit mq
+    1. instance name : proj02-rabbitmq-instance ( its your choice whatever you require you can give)
+    2. Amazon Machine Image (AMI) : CentOS-7-2111-20220825_1.x86_64- ( from the market place)
+    3. Instance type : t2.micro
+    4. keypair : attached earlier create 
+    5. security group : attached as per earlier create ie. PROJ02-SG-BACKEND
+    5. vpc :default 
+    6. subnet : default 
+    7. auto-asigned public IP : enabled
+    8. storage : default as per ami
+    9. advance detail :
+       1. user data : copy the script from /userdata/rabbitmq.sh and paste here
+    10. then final lunch it  
+    ![image](https://user-images.githubusercontent.com/62290469/234565793-c2b8c033-2375-4851-9f66-3e9736cc2fa9.png)
 
-   
     [Back to Top](#flow-of--execution)
 
