@@ -8,7 +8,7 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 1. [Login to account](#1-login-to-account)
 2. [Create key pair](#2-create-key-pair)
 3. [Create security group](#3-create-security-group)
-4. [Lunch instane with user data (bash script)](#1-login-to-account)
+4. [Lunch instance with user data (bash script)](#1-login-to-account)
 5. [Update ip to name mapping in route 53](#1-login-to-account)
 6. [build application from source code](#1-login-to-account) 
 7. [upload to s3 bucket](#1-login-to-account)
@@ -26,6 +26,8 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 
 # 2. Create key pair
 ![image](https://user-images.githubusercontent.com/62290469/234464613-6a90d906-de8f-4127-9b47-3e9a9dee745d.png)
+
+[Back to Top](#flow-of--execution)
 
 # 3. Create security group
   * Security group for ELB( AWS Elastic Load Balancer)
@@ -46,7 +48,19 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
   * Modify the security bakend security group again, to allow the own traffic 
   ![image](https://user-images.githubusercontent.com/62290469/234463963-4b4a1c5d-f002-494c-afbb-b6f952a49cdd.png)
    
-   
+# 4. Lunch instance with user data (bash script)
+  * Lunch Backend - mysql 
+    1. instance name : proj02-mysqldb-instance
+    2. Amazon Machine Image (AMI) : CentOS-7-2111-20220825_1.x86_64- ( from the market place)
+    3. Instance type : t2.micro
+    4. keypair : attached earlier creaate 
+    5. vpc :default 
+    6. subnet : default 
+    7. auto-asigned public IP : enabled
+    8. storage : default as per ami
+    9. advance detail :
+       1. user data : copy the script from /userdata/mysql.sh and paste here
+    10. then final lunch it    
    
 
    
