@@ -111,7 +111,21 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
     
     9. Kindly note that, the host name entered in dns zone should be match with application.properties in  src folder
      
- 
+# 6. build application from source code
+  * Lunch EC2 instance for tomcat web application server
+   1. Name : proj02-webapp-instance <br>
+   2. ami : ubuntu 20 LTS  <br>
+   3. type : t2.micro <br>
+   4. key pair : attached keypaire recently created <br>
+   5. security group :  PROJ02-SG-WEB-APP <br>
+   6. vpc : default 
+   7. subnet : default 
+   8. User data : copy the script from userdata/tomcat.sh and paste here
+   9. Lunch the EC2 instance 
+   
+   
+   
+   
    
     [Back to Top](#flow-of--execution)
 
