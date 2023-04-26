@@ -99,14 +99,14 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 
 # Update ip to name mapping in route 53
    * Add all three machine private ip address  in route 53 
-    1. created new hosted zone
-    2. domain name : abhiamdas99.xyz
-    3. descritpion(optional) : hosted zone for backend server
-    4. type : private hosted zone
-    5. region : asia paciic (mumabai ) 
-    6. vpc : default  ( as per your ec2 machine running
-    7. finally create it
-    8. after successfully created, add new record [create record]
+    1. created new hosted zone<br>
+    2. domain name : abhiamdas99.xyz<br>
+    3. descritpion(optional) : hosted zone for backend server<br>
+    4. type : private hosted zone<br>
+    5. region : asia paciic (mumabai ) <br>
+    6. vpc : default  ( as per your ec2 machine running<br>
+    7. finally create it<br>
+    8. after successfully created, add new record [create record]<br>
     ![image](https://user-images.githubusercontent.com/62290469/234607346-ccf09c06-0830-487d-808b-2136ad26eb87.png)
  
    
