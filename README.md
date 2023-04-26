@@ -41,6 +41,9 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
    1. Security group name - PROJ02-SG-BACKEND
    2. allow traffic from tomact abbplicaton server to  port no 3306(mysql) , 11211(memcached) and rabbitmq(5672)
       ![image](https://user-images.githubusercontent.com/62290469/234366477-5fe383e3-c75d-496e-9d74-dddfedee646a.png)
+   
+  * Modify the security bakend security group again, to allow the own traffic 
+  ![image](https://user-images.githubusercontent.com/62290469/234463963-4b4a1c5d-f002-494c-afbb-b6f952a49cdd.png)
 
    
     [Back to Top](#flow-of--execution)
