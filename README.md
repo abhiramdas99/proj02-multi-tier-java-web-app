@@ -6,7 +6,7 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 
 # Flow of  Execution
 1. [Login to account](#1-login-to-account)
-2. [Create key pair](#1-login-to-account)
+2. [Create key pair](#2-create-key-pair)
 3. [Create security group](#3-create-security-group)
 4. [Lunch instane with user data (bash script)](#1-login-to-account)
 5. [Update ip to name mapping in route 53](#1-login-to-account)
@@ -25,6 +25,7 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 [Back to Top](#flow-of--execution)
 
 # 2. Create key pair
+![image](https://user-images.githubusercontent.com/62290469/234464613-6a90d906-de8f-4127-9b47-3e9a9dee745d.png)
 
 # 3. Create security group
   * Security group for ELB( AWS Elastic Load Balancer)
@@ -44,6 +45,9 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
    
   * Modify the security bakend security group again, to allow the own traffic 
   ![image](https://user-images.githubusercontent.com/62290469/234463963-4b4a1c5d-f002-494c-afbb-b6f952a49cdd.png)
+   
+   
+   
 
    
     [Back to Top](#flow-of--execution)
