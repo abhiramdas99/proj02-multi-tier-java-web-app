@@ -143,8 +143,15 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
 # 7. upload to s3 bucket
    1. got aws console and then iam and create a user 
    2. give the "admininstraotrAccess" policy to this user 
-   3. generate a acces key based token
-   4. 
+   3. generate a acces key and  token
+   4. open bash in your laptop 
+   5. configure aws cli
+   6. create s3 bucket. The command is : aws s3 mb s3://proj02-artifact-storage    
+   7. copy the artifact to s3 bucket. The command is : aws s3 cp vprofile-v2.war s3://proj02-artifact-storage
+   8. ![image](https://user-images.githubusercontent.com/62290469/234903262-cc5094a5-0329-4fc2-90c5-d4af3a6537fe.png)
+
+   9. fgfg
+   10. 
     
 
    
