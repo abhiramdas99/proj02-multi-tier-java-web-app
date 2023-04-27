@@ -150,8 +150,36 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
    7. copy the artifact to s3 bucket. The command is : aws s3 cp vprofile-v2.war s3://proj02-artifact-storage
    8. ![image](https://user-images.githubusercontent.com/62290469/234903262-cc5094a5-0329-4fc2-90c5-d4af3a6537fe.png)
 
-   9. fgfg
-   10. 
+   9. verify its done or not . The command is : aws s3 ls proj02-artifact-storage
+   10. ![image](https://user-images.githubusercontent.com/62290469/234904753-14ab4e70-3a15-4278-9f31-4b055062062e.png)
+
+# 8. Download the artifact to tomcat ec2 instance
+  1. open iam console 
+  2. create new role 
+  3. trusted entity type : aws services
+  4. common use cases : ec2
+  5. next
+  6. Add permission : s3FullAccess
+  7. give some role name 
+  8. ![image](https://user-images.githubusercontent.com/62290469/234910561-7c4b5a4b-363a-422d-9c66-9d459eed3367.png)
+
+  9. select ec2-webapp-server  in aws ec2 dashboard
+  10.action > security > modify iam role 
+  ![image](https://user-images.githubusercontent.com/62290469/234912636-739cae80-7f73-4da9-9e40-66b48c67eedb.png)
+
+  11. take ssh the ec2-webapp-server
+  12. check tomcat is running or not . The command is : systemctl status tomcat9
+  13. check the installation folder . the command is : cd /var/lib/tomcat9
+  14. remove the default ROOT directory (command)
+    1. systemctl stop tomcat9
+    2. rm -rf ROOT
+  15. install aws cli. The command is : apt install awscli
+  16. check the bucket. The commad is : aws s3 ls s3://proj02-artifact-storage
+  17. ![image](https://user-images.githubusercontent.com/62290469/234920765-1432c750-15b5-46d9-81df-6d9393b3a470.png)
+  
+  19. now need to copy the artifact to tomcat9
+
+
     
 
    
