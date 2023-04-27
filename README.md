@@ -96,7 +96,21 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
        1. user data : copy the script from /userdata/rabbitmq.sh and paste here
     10. then final lunch it  
     ![image](https://user-images.githubusercontent.com/62290469/234565793-c2b8c033-2375-4851-9f66-3e9736cc2fa9.png)
-
+    
+    * Lunch EC2 instance for tomcat web application server
+    1. Name : proj02-webapp-instance <br>
+    2. ami : ubuntu 20 LTS  <br>
+    3. type : t2.micro <br>
+    4. key pair : attached keypaire recently created <br>
+    5. security group :  PROJ02-SG-WEB-APP <br>
+    6. vpc : default 
+    7. subnet : default 
+    8. User data : copy the script from userdata/tomcat_ubuntu.sh and paste here
+    9. Lunch the EC2 instance 
+    10. make sure that, ssh should be allow in corresponnding security group
+    11. take the remote also make sure the that, its a ubuntu machine and user should be ubuntu
+     
+    
 # Update ip to name mapping in route 53
    * Add all three machine private ip address  in route 53 
     1. created new hosted zone<br>
@@ -110,19 +124,29 @@ Deploy a Java Web applicatin in aws resources , using the tools like - git, mave
     ![image](https://user-images.githubusercontent.com/62290469/234607346-ccf09c06-0830-487d-808b-2136ad26eb87.png)
     
     9. Kindly note that, the host name entered in dns zone should be match with application.properties in  src folder
+    10. In application.properties, following thing should be updated
+      For mysql
+      jdbc.url=jdbc:mysql://db01.abhiramdas99.xyz:3306/accounts?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+      memcached.active.host=mc01.abhiramdas99.xyz ( in your case you link our domain )
+      rabbitmq.address=rmq01.abhiramdas99.xyz
+    
      
 # 6. build application from source code
-  * Lunch EC2 instance for tomcat web application server
-   1. Name : proj02-webapp-instance <br>
-   2. ami : ubuntu 20 LTS  <br>
-   3. type : t2.micro <br>
-   4. key pair : attached keypaire recently created <br>
-   5. security group :  PROJ02-SG-WEB-APP <br>
-   6. vpc : default 
-   7. subnet : default 
-   8. User data : copy the script from userdata/tomcat.sh and paste here
-   9. Lunch the EC2 instance 
-   
+    1. Now you are in your local laptop or pc 
+    2. pull the project to your local laptop  i.e git pull 
+    3. make sure that, you have with all following file and folder expect target folder
+    ![image](https://user-images.githubusercontent.com/62290469/234846244-ee25d0d6-0341-4e66-9427-8e1f23e138d6.png)
+    4. run the "mvn install" in that folder , where  the pom.xml file are present
+    5. once installed, you can able to see a target folder 
+    ![image](https://user-images.githubusercontent.com/62290469/234849331-6e8d4ffc-c830-4514-b017-096952a383f1.png)
+    
+# 7. upload to s3 bucket
+   1. got aws console and then iam and create a user 
+   2. give the "admininstraotrAccess" policy to this user 
+   3. generate a acces key based token
+   4. 
+    
+
    
    
    
